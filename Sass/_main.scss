@@ -1,0 +1,660 @@
+// ----------------------------------Hero Wrapper -----
+#hero::after,
+#hero::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hero__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+// Left Section in hero__wrapper
+.hero__information {
+  max-width: 50%;
+}
+.enterInfo {
+  @include text(#f9b800, "Segoe UI", 30px, 700, normal);
+  text-transform: uppercase;
+}
+.enterTheme {
+  @include text(#262626, "Segoe UI", 80px, 700, 90px);
+  // display: flex;
+}
+.heroCheked {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 60px;
+}
+.infoCheck {
+  display: flex;
+  align-items: center;
+  padding: 14px 40px 14px 20px;
+  background-color: #fff;
+  border-radius: 100px;
+
+  img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin-right: 5px;
+  }
+  span {
+    @include text(#262626, "Segoe UI", 20px, 600, normal);
+  }
+}
+.btn {
+  @include button;
+  margin-top: 60px;
+  @include text(#262626, "Segoe UI", 24px, 700, normal);
+
+  img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
+}
+
+// rigth Section in hero__wrapper
+.heroImg {
+  max-width: 50%;
+  height: 714px;
+}
+.hero-img {
+  width: 100%;
+}
+
+// Responsive
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .enterTheme {
+    @include text(#262626, "Segoe UI", 68px, 700, normal);
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero__wrapper {
+    flex-direction: column-reverse;
+    margin-top: 0px;
+    // max-width: 100%;
+  }
+
+  // Left Section in hero__wrapper
+  .hero__information {
+    max-width: 100%;
+  }
+  .enterInfo {
+    @include text(#f9b800, "Segoe UI", 16px, 700, normal);
+    text-transform: uppercase;
+  }
+  .enterTheme {
+    @include text(#262626, "Segoe UI", 36px, 700, normal);
+  }
+
+  .heroCheked {
+    gap: 14px;
+    margin-top: 30px;
+  }
+  .infoCheck {
+    padding: 11px 33px 11px 16px;
+
+    img {
+      width: 25.276px;
+      height: 25.276px;
+      object-fit: cover;
+    }
+    span {
+      @include text(#262626, "Segoe UI", 20px, 600, normal);
+    }
+  }
+
+  .btn {
+    width: 100%;
+    padding: 16px 38px 18px;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 40px;
+    @include text(#262626, "Segoe UI", 24px, 700, normal);
+
+    img {
+      width: 23.077px;
+      height: 23.077px;
+      object-fit: cover;
+    }
+  }
+
+  // rigth Section in hero__wrapper
+  .heroImg {
+    max-width: 100%;
+    height: auto;
+    img {
+      width: 100%;
+    }
+  }
+}
+// ------------- End of Header Wrapper ------
+
+// -------------- About Us Section------------
+#aboutUs::after,
+#after::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+#aboutUs {
+  position: relative;
+}
+
+.about-us__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 200px;
+}
+
+// about us information - left Section
+.about-us__information {
+  max-width: 575px;
+}
+.style__h2 {
+  @include text(#262626, "Segoe UI", 50px, 700, normal);
+}
+.underLineParagraph {
+  text-decoration: underline;
+  @include text(#262626, "Segoe UI", 20px, 600, 34px);
+  margin-top: 50px;
+}
+.style__p {
+  @include text(#262626, "Segoe UI", 20px, 400, normal);
+  letter-spacing: 0.4px;
+}
+.about__btn {
+  .btn {
+    background-color: #262626;
+    color: #fff;
+    margin-top: 44px;
+
+    img {
+      filter: brightness(30);
+    }
+  }
+}
+
+// about us Image - right Section
+.about-us__image {
+  max-width: 50%;
+
+  img {
+    width: 100%;
+  }
+}
+// rotate BG
+.rotateSection {
+  width: 100%;
+  min-height: 130%;
+  background-color: #f9b800;
+  transform: skewY(-10deg);
+  position: absolute;
+  top: -120px;
+  left: 0;
+  z-index: -1;
+}
+
+// Responsive}
+@media screen and (max-width: 1345px) and (min-width: 768px) {
+  .about-us__information {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-us__wrapper {
+    flex-direction: column-reverse;
+  }
+
+  // about us information - left Section
+  .about-us__information {
+    max-width: 100%;
+  }
+  .style__h2 {
+    @include text(#262626, "Segoe UI", 36px, 700, normal);
+  }
+  .underLineParagraph {
+    margin-top: 20px;
+  }
+  .about__btn {
+    .btn {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+
+  // about us Image - right Section
+  .about-us__image {
+    max-width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+  .rotateSection {
+    width: 100%;
+    min-height: 140%;
+    background-color: #f9b800;
+    transform: skewY(-10deg);
+    position: absolute;
+    top: -60px;
+    left: 0;
+    z-index: -1;
+  }
+}
+// ----------- End of About Section ---------------
+
+// ----------- Portfolio Card Section ------------
+
+#portfolio::after,
+#portfolio::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+#portfolio {
+  position: relative;
+}
+.portfolio__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // padding: 100px 0;
+  margin-top: 200px;
+}
+
+// Portfolio Information - Left Section
+.portfolio__information {
+  max-width: 552px;
+}
+.enter__portfolio {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.4px;
+}
+.port_h2 {
+  color: #fff;
+  margin-top: 20px;
+}
+.portfolio__btn {
+  .btn {
+    background-color: #fff;
+  }
+}
+
+// Portfolio Cards - Right section
+.portfolio__cards {
+  display: flex;
+  gap: 60px;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.card {
+  background-color: #fff;
+  padding: 50px 50px 56px;
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  border-radius: 60px;
+  img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+  .head__num {
+    @include text(#262626, " Segoe UI", 72px, 700, normal);
+    margin-top: 24px;
+    span {
+      @include text(#262626, "poppins", 72px, 700, normal);
+      color: #f9b800;
+    }
+
+    .b_y {
+      color: #fff;
+    }
+  }
+  h3 {
+    @include text(#262626, " Segoe UI", 24px, 700, normal);
+    margin-top: 10px;
+  }
+  .infoForH3 {
+    @include text(#262626, " Segoe UI", 20px, 600, normal);
+    margin-top: 20px;
+  }
+  .infoForP {
+    @include text(#262626, " Segoe UI", 18px, 350, normal);
+    text-transform: capitalize;
+    margin-top: 2px;
+  }
+}
+.box__yellow {
+  background-color: #f9b800;
+}
+
+.cardsRight {
+  padding-top: 123px;
+}
+
+// rotate BG
+.rotateBlack {
+  width: 100%;
+  min-height: 135%;
+  background-color: #262626;
+  transform: skewY(-10deg);
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1345px) and (min-width: 1024px) {
+  .portfolio__information {
+    max-width: 50%;
+  }
+  .portfolio__cards {
+    display: flex;
+    gap: 30px;
+  }
+  .card {
+    padding: 40px 40px 46px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .portfolio__information {
+    max-width: 50%;
+  }
+  .portfolio__cards {
+    display: flex;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 30px 20px 36px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio__wrapper {
+    flex-direction: column;
+  }
+  .portfolio__cards {
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .rotateBlack {
+    top: 80px;
+  }
+  .cards {
+    gap: 30px;
+  }
+  .card {
+    max-width: 100%;
+  }
+  .cardsRight {
+    padding-top: 0;
+  }
+}
+// -------- End of Portfolio section ------------
+
+// ----------- Testemonial --------
+#testemonial::after,
+#testemonial::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+#testemonial {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.testemonial__wrapper {
+  background-color: #fff;
+  margin-top: 150px;
+  border-radius: 100px;
+  display: flex;
+  padding: 100px 135px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 72px;
+}
+.testemon__img {
+  max-width: 472px;
+
+  img {
+    width: 100%;
+  }
+}
+.testemon__p {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
+  margin-top: 40px;
+}
+.humanName {
+  margin-top: 20px;
+  @include text(#262626, "Segoe UI", 24px, 700, normal);
+}
+.nextPrevBtns {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+}
+.pnBtn {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1560px) {
+  .testemon__img {
+    max-width: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+  .testemon__info {
+    width: 50%;
+  }
+
+  .rotateBlack {
+    min-height: 200%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #testemonial {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .testemonial__wrapper {
+    margin-top: 70px;
+    border-radius: 50px;
+    padding: 38px 30px;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .testemonial__h2 {
+    font-size: 30px;
+    line-height: normal;
+    text-align: center;
+  }
+  .testemon__p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .humanName {
+    text-align: center;
+  }
+  .nextPrevBtns {
+    margin-top: 30px;
+    justify-content: center;
+  }
+  .pnBtn {
+    cursor: pointer;
+  }
+  .rotateBlack {
+    min-height: 130%;
+  }
+}
+// ------- End of Testemonial ----------
+
+// --------- Request Section -----
+#request::after,
+#request::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+#request {
+  position: relative;
+}
+.request__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.request__information {
+  max-width: 50%;
+}
+.request__img {
+  max-width: 50%;
+
+  img {
+    width: 100%;
+  }
+}
+.request__btn .btn {
+  background-color: #262626;
+  color: #fff;
+  img {
+    filter: brightness(30);
+  }
+}
+.requestBg {
+  top: -200px;
+  min-height: 150%;
+  // top: ;
+}
+
+@media screen and (max-width: 767px) {
+  .request__wrapper {
+    flex-direction: column-reverse;
+  }
+  .request__information {
+    max-width: 100%;
+  }
+  .request__img {
+    margin-top: 70px;
+    max-width: 100%;
+  }
+}
+// ---- End of Request -----
+
+// ---------- Reduction Section ----------------
+#reduction::after,
+#reduction::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+#reduction {
+  position: relative;
+}
+.reduction__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 300px;
+  .style__h2 {
+    color: #fff;
+  }
+}
+.reduce__p {
+  font-size: 30px;
+  color: #fff;
+  margin-top: 14px;
+  margin-bottom: 90px;
+}
+.reduction__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+.reduction__card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 50px 90px;
+  border-radius: 40px;
+}
+.style__h4 {
+  @include text(#262626, "Segoe UI", 30px, 700, normal);
+}
+.style__card-p {
+  @include text(#262626, "Segoe UI", 30px, 400, 40px);
+  margin-top: 20px;
+}
+.reduce__icon {
+  cursor: pointer;
+}
+.displayNone {
+  // transform: translateY(-100%);
+  // opacity: 0;
+  // transition: 0.4s;
+  display: none;
+}
+.displayBlock {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.4s;
+}
+.reduce__bg {
+  min-height: 112%;
+}
+@media screen and (max-width: 980px) {
+  .style__p {
+    font-size: 18px;
+  }
+  .reduction__wrapper {
+    margin-top: 200px;
+  }
+  .reduction__cards {
+    gap: 18px;
+  }
+  .reduction__card {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+  .style__h4 {
+    font-size: 24px;
+  }
+
+  .style__card-p {
+    @include text(#262626, "Segoe UI", 24px, 400, 40px);
+    margin-top: 10px;
+  }
+  .reduce__bg {
+    min-height: 102%;
+  }
+}
+// --------------- End of Reduction Section ------
